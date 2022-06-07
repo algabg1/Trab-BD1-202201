@@ -7,7 +7,6 @@ Trabalho desenvolvido durante a disciplina de BD1
 Integrantes do grupo<br>
 Ana Gabriella Gomes de Almeida Ferreira: algabg1@gmail.com<br>
 Pedro Aguiar Alves:pedro1aguiar@outlook.com<br>
-...<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
