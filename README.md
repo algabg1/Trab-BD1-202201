@@ -1,4 +1,4 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  Coleta de Materiais de Genshin Impact
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
@@ -14,12 +14,6 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 > Um jogador de Genshin Impact começou recentemente a melhorar seus personagens a fim de conseguir derrotar oponentes de níveis altos e concluir missões de maneira mais fácil e rápida. Para isso, ele precisa coletar determinados materiais específicos para aumentar os níveis dos personagens e suas respectivas armas e habilidades. O sistema proposto tem como objetivo gerenciar a coleta de materiais e artefatos. Sendo assim, o sistema deve armazenar informações de personagens, equipamentos, domínios e principalmente materiais e artefatos, além de suas relações como quais personagens ou equipamentos necessitam de quais materiais e artefatos, bem como os domínios do mapa do jogo.
 
 ### 3.MINI-MUNDO<br>
-
-**LEMBRAR DE FAZER ISSO AQUI** Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar) <br>
-Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente  real)<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
 > O sistema proposto deve gerenciar os materiais e artefatos que serão coletados, assim como sua disponibilidade (onde, quando e como está disponível). Os personagens e equipamentos possuem nome e nível. Eles precisam de materiais e artefatos para subir de nível. Os materiais e artefatos possuem nome, disponibilidade de horário, quantidade e tipo. Os personagens também podem elevar o nível de suas habilidades e elas podem ser do tipo "Normal", "Elemental" ou "Suprema". Os materiais e artefatos podem ser achados em domínios diferentes. Esses domínios são locais específicos no mapa do jogo e possuem nome e descrição. Os materiais e artefatos ficam disponíveis em horários diferentes nos domínios.
 
