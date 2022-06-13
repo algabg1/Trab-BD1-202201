@@ -91,7 +91,84 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        (criação de tabelas, alterações, etc..) 
+        
+**Principais tabelas**
+
+**CREATE TABLE ELEMENTO (**<br>
+    &emsp;id_elemento SERIAL PRIMARY KEY,<br>
+    &emsp;nome VARCHAR,<br>
+    &emsp;nivel INTEGER<br>
+);<br>
+
+**CREATE TABLE HABILIDADE (**<br>
+    &emsp;id_habilidade SERIAL PRIMARY KEY,<br>
+    &emsp;nome VARCHAR,<br>
+    &emsp;nivel INTEGER,<br>
+    &emsp;tipo VARCHAR<br>
+);<br>
+
+**CREATE TABLE MATERIAL (**<br>
+    &emsp;id_material SERIAL PRIMARY KEY,<br>
+    &emsp;nome VARCHAR,<br>
+    &emsp;quantidade INTEGER,<br>
+    &emsp;disp_horario DATE,<br>
+    &emsp;tipo VARCHAR<br>
+);<br>
+
+**CREATE TABLE DOMINIO (**<br>
+    &emsp;id_dominio SERIAL PRIMARY KEY,<br>
+    &emsp;nome VARCHAR,<br>
+    &emsp;descricao VARCHAR<br>
+);<br>
+
+/******************************************************************************************/
+
+**Tabelas de relacionamento**
+
+**CREATE TABLE ELEMENTO_HABILIDADE (**<br>
+    &emsp;id_elemhab SERIAL PRIMARY KEY,<br>
+    &emsp;fk_id_elemento INTEGER,<br>
+    &emsp;fk_id_habilidade INTEGER<br>
+);<br>
+
+**ALTER TABLE ELEMENTO_HABILIDADE** ADD CONSTRAINT FK_ELEM_HAB FOREIGN KEY (fk_id_elemento)<br>
+REFERENCES ELEMENTO(id_elemento)<br>
+
+**ALTER TABLE ELEMENTO_HABILIDADE** ADD CONSTRAINT FK_ELEM_HAB2 FOREIGN KEY (fk_id_habilidade)<br>
+REFERENCES HABILIDADE(id_habilidade)<br>
+
+**CREATE TABLE ELEMENTO_MATERIAL (**<br>
+    &emsp;fk_id_elemento INTEGER,<br>
+    &emsp;fk_id_material INTEGER<br>
+);
+
+**ALTER TABLE ELEMENTO_MATERIAL** ADD CONSTRAINT FK_ELEM_MAT FOREIGN KEY (fk_id_elemento)<br>
+REFERENCES ELEMENTO(id_elemento) ON DELETE RESTRICT<br>
+
+**ALTER TABLE ELEMENTO_MATERIAL** ADD CONSTRAINT FK_ELEM_MAT2 FOREIGN KEY (fk_id_material)<br>
+REFERENCES MATERIAL(id_material) ON DELETE RESTRICT<br>
+
+**CREATE TABLE ELEMENTO_HABILIDADE_MATERIAL (**<br>
+    &emsp;fk_id_elemhab INTEGER,<br>
+    &emsp;fk_id_material INTEGER<br>
+);
+
+**ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL** ADD CONSTRAINT FK_ELEM_HAB_MAT FOREIGN KEY (fk_id_elemhab)<br>
+REFERENCES ELEMENTO_HABILIDADE (id_elemhab) ON DELETE RESTRICT;<br>
+
+**ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL** ADD CONSTRAINT FK_ELEM_HAB_MAT2 FOREIGN KEY (fk_id_material)<br>
+REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;<br>
+
+**CREATE TABLE MATERIAL_DOMINIO (**<br>
+    &emsp;fk_id_material INTEGER,<br>
+    &emsp;fk_id_dominio INTEGER<br>
+);
+
+**ALTER TABLE MATERIAL_DOMINIO** ADD CONSTRAINT FK_MAT_DOM FOREIGN KEY (fk_id_material)<br>
+REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;<br>
+
+**ALTER TABLE MATERIAL_DOMINIO** ADD CONSTRAINT FK_MAT_DOM2 FOREIGN KEY (fk_id_dominio)<br>
+REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;<br>
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
