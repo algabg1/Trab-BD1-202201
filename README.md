@@ -77,7 +77,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
     
-    ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela [**qual o nome certo pra isso mesmo?**] pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
+    ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, **qual o nome certo pra isso mesmo** pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
     HABILIDADE: Tabela que armazena as informações das habilidades dos elementos que são personagens.<br>
     TIPOHAB: Tabela que armazena as informações dos tipos de habilidades.
     MATERIAL: Tabela que armazena as informações dos materiais e artefatos (ambos em uma mesma tabela pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
