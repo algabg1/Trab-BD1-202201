@@ -6,7 +6,7 @@ Trabalho desenvolvido durante a disciplina de BD1
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
 Ana Gabriella Gomes de Almeida Ferreira: algabg1@gmail.com<br>
-Pedro Aguiar Alves:pedro1aguiar@outlook.com<br>
+Pedro Aguiar Alves: pedro1aguiar@outlook.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇÃO<br>
 Este documento contém a especificação do projeto do banco de dados **Materiais e artefatos de Genshin Impact** e motivação da escolha realizada. <br>
@@ -19,9 +19,9 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 
 ### 4.PROTOTIPAÇÃO, PERGUNTAS A SEREM RESPONDIDAS E TABELA DE DADOS<br>
 #### 4.1 RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
+<!-- Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br> -->
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
+<!-- Sugestão: https://balsamiq.com/products/mockups/<br> -->
 
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-login.jpg" width="450">
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg" width="450">
@@ -31,37 +31,44 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+   <!-- a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
+    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto! -->
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
+> O sistema proposto pode gerar:
+* Relatórios de materiais e artefatos que cada personagem utiliza.
+* Relatórios de materiais e artefatos que as habilidades dos personagens utilizam.
+* Relatórios de materiais e artefatos que os equipamentos utilizam.
+* Relatórios dos locais que os materiais e artefatos estão disponíveis.
+* Relatórios dos dias e a quantidade de tempo que os materiais e artefatos estarão disponíveis.
+
+<!-- A Empresa DevCom precisa inicialmente dos seguintes relatórios:
 * Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
 * Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
 * Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
 * Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
 >> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa.
+* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa. -->
 
  
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
-    a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
-    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados 
+ <!--   a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
+    b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados -->
     
 ![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
     
     
 ### 5.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
+  <!--  A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
     B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 3 e o Máximo 5.
         * informe quais são as 3 principais entidades do sistema em densenvolvimento<br>(se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
     C) Principais fluxos de informação/entidades do sistema (mínimo 3). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
     D) Qualidade e Clareza
         Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
+        e tuplas falsas (Aplicar os conceitos de normalização abordados).   -->
         
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual") 
     
     
         
@@ -73,9 +80,9 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 #### 5.2 Descrição dos dados 
     [objeto]: [descrição do objeto]
     
-    EXEMPLO:
+  <!--  EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br> -->
     
     ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, **qual o nome certo pra isso mesmo** pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
     HABILIDADE: Tabela que armazena as informações das habilidades dos elementos que são personagens.<br>
@@ -85,102 +92,106 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
+ <!--       a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+        (não serão aceitos modelos que não estejam em conformidade) -->
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         
 **Principais tabelas**
 
-**CREATE TABLE ELEMENTO (**<br>
-    &emsp;id_elemento SERIAL PRIMARY KEY,<br>
-    &emsp;nome VARCHAR,<br>
-    &emsp;nivel INTEGER<br>
-);<br>
+```
+CREATE TABLE ELEMENTO (
+    id_elemento SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    nivel INTEGER
+);
 
-**CREATE TABLE HABILIDADE (**<br>
-    &emsp;id_habilidade SERIAL PRIMARY KEY,<br>
-    &emsp;nome VARCHAR,<br>
-    &emsp;nivel INTEGER,<br>
-    &emsp;tipo VARCHAR<br>
-);<br>
+CREATE TABLE HABILIDADE (
+    id_habilidade SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    nivel INTEGER,
+    tipo VARCHAR
+);
 
-**CREATE TABLE MATERIAL (**<br>
-    &emsp;id_material SERIAL PRIMARY KEY,<br>
-    &emsp;nome VARCHAR,<br>
-    &emsp;quantidade INTEGER,<br>
-    &emsp;disp_horario DATE,<br>
-    &emsp;tipo VARCHAR<br>
-);<br>
+CREATE TABLE MATERIAL (
+    id_material SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    quantidade INTEGER,
+    disp_horario DATE,
+    tipo VARCHAR
+);
 
-**CREATE TABLE DOMINIO (**<br>
-    &emsp;id_dominio SERIAL PRIMARY KEY,<br>
-    &emsp;nome VARCHAR,<br>
-    &emsp;descricao VARCHAR<br>
-);<br>
-
-/******************************************************************************************/
+CREATE TABLE DOMINIO (
+    id_dominio SERIAL PRIMARY KEY,
+    nome VARCHAR,
+    descricao VARCHAR
+);
+```
 
 **Tabelas de relacionamento**
-
-**CREATE TABLE ELEMENTO_HABILIDADE (**<br>
-    &emsp;id_elemhab SERIAL PRIMARY KEY,<br>
-    &emsp;fk_id_elemento INTEGER,<br>
-    &emsp;fk_id_habilidade INTEGER<br>
-);<br>
-
-**ALTER TABLE ELEMENTO_HABILIDADE** ADD CONSTRAINT FK_ELEM_HAB FOREIGN KEY (fk_id_elemento)<br>
-REFERENCES ELEMENTO(id_elemento)<br>
-
-**ALTER TABLE ELEMENTO_HABILIDADE** ADD CONSTRAINT FK_ELEM_HAB2 FOREIGN KEY (fk_id_habilidade)<br>
-REFERENCES HABILIDADE(id_habilidade)<br>
-
-**CREATE TABLE ELEMENTO_MATERIAL (**<br>
-    &emsp;fk_id_elemento INTEGER,<br>
-    &emsp;fk_id_material INTEGER<br>
+```
+CREATE TABLE ELEMENTO_HABILIDADE (
+    id_elemhab SERIAL PRIMARY KEY,
+    fk_id_elemento INTEGER,
+    fk_id_habilidade INTEGER
 );
 
-**ALTER TABLE ELEMENTO_MATERIAL** ADD CONSTRAINT FK_ELEM_MAT FOREIGN KEY (fk_id_elemento)<br>
-REFERENCES ELEMENTO(id_elemento) ON DELETE RESTRICT<br>
+ALTER TABLE ELEMENTO_HABILIDADE ADD CONSTRAINT FK_ELEM_HAB FOREIGN KEY (fk_id_elemento)
+REFERENCES ELEMENTO(id_elemento)
 
-**ALTER TABLE ELEMENTO_MATERIAL** ADD CONSTRAINT FK_ELEM_MAT2 FOREIGN KEY (fk_id_material)<br>
-REFERENCES MATERIAL(id_material) ON DELETE RESTRICT<br>
-
-**CREATE TABLE ELEMENTO_HABILIDADE_MATERIAL (**<br>
-    &emsp;fk_id_elemhab INTEGER,<br>
-    &emsp;fk_id_material INTEGER<br>
+ALTER TABLE ELEMENTO_HABILIDADE ADD CONSTRAINT FK_ELEM_HAB2 FOREIGN KEY (fk_id_habilidade)
+REFERENCES HABILIDADE(id_habilidade)
+```
+```
+CREATE TABLE ELEMENTO_MATERIAL (
+    fk_id_elemento INTEGER,
+    fk_id_material INTEGER
 );
 
-**ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL** ADD CONSTRAINT FK_ELEM_HAB_MAT FOREIGN KEY (fk_id_elemhab)<br>
-REFERENCES ELEMENTO_HABILIDADE (id_elemhab) ON DELETE RESTRICT;<br>
+ALTER TABLE ELEMENTO_MATERIAL ADD CONSTRAINT FK_ELEM_MAT FOREIGN KEY (fk_id_elemento)
+REFERENCES ELEMENTO(id_elemento) ON DELETE RESTRICT
 
-**ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL** ADD CONSTRAINT FK_ELEM_HAB_MAT2 FOREIGN KEY (fk_id_material)<br>
-REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;<br>
-
-**CREATE TABLE MATERIAL_DOMINIO (**<br>
-    &emsp;fk_id_material INTEGER,<br>
-    &emsp;fk_id_dominio INTEGER<br>
+ALTER TABLE ELEMENTO_MATERIAL ADD CONSTRAINT FK_ELEM_MAT2 FOREIGN KEY (fk_id_material)
+REFERENCES MATERIAL(id_material) ON DELETE RESTRICT
+```
+```
+CREATE TABLE ELEMENTO_HABILIDADE_MATERIAL (
+    fk_id_elemhab INTEGER,
+    fk_id_material INTEGER
 );
 
-**ALTER TABLE MATERIAL_DOMINIO** ADD CONSTRAINT FK_MAT_DOM FOREIGN KEY (fk_id_material)<br>
-REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;<br>
+ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL ADD CONSTRAINT FK_ELEM_HAB_MAT FOREIGN KEY (fk_id_elemhab)
+REFERENCES ELEMENTO_HABILIDADE (id_elemhab) ON DELETE RESTRICT;
 
-**ALTER TABLE MATERIAL_DOMINIO** ADD CONSTRAINT FK_MAT_DOM2 FOREIGN KEY (fk_id_dominio)<br>
-REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;<br>
+ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL ADD CONSTRAINT FK_ELEM_HAB_MAT2 FOREIGN KEY (fk_id_material)
+REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;
+```
+```
+CREATE TABLE MATERIAL_DOMINIO (
+    fk_id_material INTEGER,
+    fk_id_dominio INTEGER
+);
+
+ALTER TABLE MATERIAL_DOMINIO ADD CONSTRAINT FK_MAT_DOM FOREIGN KEY (fk_id_material)
+REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;
+
+ALTER TABLE MATERIAL_DOMINIO ADD CONSTRAINT FK_MAT_DOM2 FOREIGN KEY (fk_id_dominio)
+REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
+```
         
        
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
+<!--        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+        c) formato .SQL -->
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+<!--    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br> -->
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
