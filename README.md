@@ -23,11 +23,20 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 
 <!-- Sugestão: https://balsamiq.com/products/mockups/<br> -->
 
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-login.jpg" width="450">
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg" width="450">
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq2.jpg" width="450">
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers1.jpg" width="450">
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers2.jpg" width="450">
+<img src="[image1.png](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-login.jpg)" width="450"/> <img src="[image2.png](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg)" width="450"/> 
+
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-login.jpg" width="450" hspace="20">
+<br>
+
+<img align="left" src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg" width="450" hspace="20">
+<img align="left" src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq2.jpg" width="450">
+<br>
+
+<img align="left" src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers1.jpg" width="450" hspace="20">
+<img align="left" src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers2.jpg" width="450">
+<br>
+<br>
 
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
@@ -68,7 +77,7 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   -->
         
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloConceitualGenshin.png" width="600">
+![alt text](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloConceitualGenshin.png)
     
     
         
@@ -96,7 +105,7 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade) -->
         
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloLogicoGenshin.png" width="600">
+![alt text](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloLogicoGenshin.png)
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
