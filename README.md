@@ -192,6 +192,42 @@ REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 <!--    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br> -->
+
+```
+SELECT * FROM ELEMENTO
+```
+
+<!-- <img src="LINK" width="450"> -->
+
+```
+SELECT * FROM HABILIDADE
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM MATERIAL
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM DOMINIO
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM ELEMENTO_HABILIDADE
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM ELEMENTO_MATERIAL
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM ELEMENTO_HABILIDADE_MATERIAL
+```
+<!-- <img src="LINK" width="450"> -->
+```
+SELECT * FROM MATERIAL_DOMINIO
+```
+<!-- <img src="LINK" width="450"> -->
+
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
