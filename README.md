@@ -197,36 +197,43 @@ REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
 SELECT * FROM ELEMENTO
 ```
 
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMENTO.png" width="450">
 
 ```
 SELECT * FROM HABILIDADE
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/HABILIDADE.png" width="450">
+
 ```
 SELECT * FROM MATERIAL
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/MATERIAL.png" width="450">
+
 ```
 SELECT * FROM DOMINIO
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/DOMINIO.png" width="450">
+
 ```
 SELECT * FROM ELEMENTO_HABILIDADE
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMHAB.png" width="450">
+
 ```
 SELECT * FROM ELEMENTO_MATERIAL
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMMAT.png" width="450">
+
 ```
 SELECT * FROM ELEMENTO_HABILIDADE_MATERIAL
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMHABMAT.png" width="450">
+
 ```
 SELECT * FROM MATERIAL_DOMINIO
 ```
-<!-- <img src="LINK" width="450"> -->
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/MATDOM.png" width="450">
+
 
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
