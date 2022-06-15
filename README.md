@@ -68,7 +68,7 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   -->
         
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual") 
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloConceitualGenshin.png" width="600">
     
     
         
@@ -95,6 +95,8 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
  <!--       a) inclusão do esquema lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade) -->
+        
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloLogicoGenshin.png" width="600">
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
