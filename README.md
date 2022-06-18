@@ -79,8 +79,8 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    Grupo01: Camila Volponi e Vitor Siqueira
+    Grupo02: 
 
 #### 5.2 Descrição dos dados 
     [objeto]: [descrição do objeto]
