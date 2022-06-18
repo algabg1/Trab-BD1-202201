@@ -200,6 +200,158 @@ REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL -->
 
+```
+INSERT INTO DOMINIO VALUES
+(1,'Enter the Golden House', 'Boss Domain'),
+(2,'Confront Stormterror', 'Boss Domain'),
+(3,'Beneath the Dragon-Queller','Boss Domain'),
+(4,'Forsaken Rift', 'Talent Material'),
+(5,'Taishan Mansion', 'Talent MAterial'),
+(6,'Violet Court','Talent Material'),
+(7,'Cecilia Garden','Weapon Material'),
+(8,'Hidden Palace of Lianshan Formula','Weapon Material'),
+(9,'Court of Flowing Sand','Weapon Material'),
+(10,'Narukami Island: Tenshukaku','Boss Domain');
+```
+```
+INSERT INTO ELEMENTO VALUES
+(1,'Solar Pearl',60),
+(2,'Aqua Simulacra',60),
+(3,'Calamity Queller',70),
+(4,'Skyward Pride',40),
+(5,'Everlasting Moonglow',50),
+(6,'Jean',40),
+(7,'Noelle',80),
+(8,'Xiao',85),
+(9,'Ayaka',60),
+(10,'Sangonomiya Kokomi',70);
+```
+```
+INSERT INTO HABILIDADE VALUES
+(1,'Favonius Bladework',6),
+(2,'Gale Blade',8),
+(3,'Dandelion Breeze',7),
+(4,'Favonius Bladework - Maid',4),
+(5,'Breastplate',5),
+(6,'Sweeping Time',4),
+(7,'Whirlwind Thrust',8),
+(8,'Lemniscatic Wind Cycling',8),
+(9,'Bane of All Evil',6),
+(10,'Kabuki',7),
+(11,'Hyouka',7),
+(12,'Soumetsu',7),
+(13,'Yhe Shape of Water',3),
+(14,'Kurages Oath',2),
+(15,'Nereids Ascension',4);
+```
+```
+INSERT INTO MATERIAL VALUES
+(1,'Relic from Guyun','2022-06-20',1,'Weapon Ascension Material'),
+(2,'Mist Veiled Gold Elixir','2022-06-21',2,'Weapon Ascension Material'),
+(3,'Boreal Wolfs Cracked Tooth','2022-06-20',1,'Weapon Ascension Material'),
+(4,'Jeweled Branch of a Distant Sea','2022-06-22',2,'Weapon Ascension Material'),
+(5,'Vayuda Turquoise Fragment','2022-06-20',3,'Character Ascension Material'),
+(6,'Hurricane Seed','2022-06-20',2,'Elemental Stone'),
+(7,'Prithiva Topaz Gemstone','2022-06-20',3,'Character Ascension Material'),
+(8,'Basalt Pillar','2022-06-20',3,'Elemental Stone'),
+(9,'Vayuda Turquoise Gemstone','2022-06-20',3,'Character Ascension Material'),
+(10,'Juvenile Jade','2022-06-20',3,'Elemental Stone'),
+(11,'Shivada Jade Chunk','2022-06-20',3,'Character Ascension Material'),
+(12,'Perpetual Heart','2022-06-20',3,'Elemental Stone'),
+(13,'Varunada Lazurite Chunk','2022-06-20',3,'Character Ascension Material'),
+(14,'Dew of Repudiation','2022-06-20',2,'Elemental Stone'),
+(15,'Dvalins Plume','2022-06-20',2,'Talent Ascencion Material'),
+(16,'Dvalins Claw','2022-06-20',2,'Talent Ascencion Material'),
+(17,'Shadow of the Warrior','2022-06-20',2,'Talent Ascencion Material'),
+(18,'Bloodjade Branch','2022-06-20',2,'Talent Ascencion Material'),
+(19,'Hellfire Butterfly','2022-06-20',2,'Talent Ascencion Material')
+```
+```
+INSERT INTO TIPOHABILIDADE VALUES
+(1,1),
+(2,2),
+(3,3),
+(4,1),
+(5,2),
+(6,3),
+(7,1),
+(8,2),
+(9,3),
+(10,1),
+(11,2),
+(12,3),
+(13,1),
+(14,2),
+(15,3);
+```
+```
+INSERT INTO MATDOM VALUES
+(1,17),
+(2,15),
+(2,16),
+(3,18),
+(10,19)
+```
+```
+INSERT INTO ELEMMAT VALUES
+(1,1),
+(2,1),
+(3,2),
+(4,3),
+(5,4),
+(6,5),
+(6,6),
+(7,7),
+(7,8),
+(8,9),
+(8,10),
+(9,11),
+(9,12),
+(10,13),
+(10,14)
+```
+```
+INSERT INTO ELEMHAB_POSSUI VALUES
+(1,6,1),
+(2,6,2),
+(3,6,3),
+(4,7,1),
+(5,7,2),
+(6,7,3),
+(7,8,1),
+(8,8,2),
+(9,8,3),
+(10,9,1),
+(11,9,2),
+(12,9,3),
+(13,10,1),
+(14,10,2),
+(15,10,3);
+```
+```
+INSERT INTO ELEMHABMAT VALUES
+(1,15),
+(2,15),
+(3,15),
+(4,16),
+(5,16),
+(6,16),
+(7,17),
+(8,17),
+(9,17),
+(10,18),
+(11,18),
+(12,18),
+(13,19),
+(14,19),
+(15,19)
+```
+```
+INSERT INTO TIPOHAB VALUES
+(1,'NORMAL'),
+(2,'ELEMENTAL'),
+(3,'SUPREMA')
+```
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 <!--    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br> -->
@@ -247,6 +399,58 @@ SELECT * FROM MATERIAL_DOMINIO
 
 
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
+```
+SELECT * FROM ELEMENTO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemento.png" width="450">
+
+```
+SELECT * FROM HABILIDADE
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-habilidade.png" width="450">
+
+```
+SELECT * FROM TIPOHAB
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-tipohab.png" width="450">
+
+```
+SELECT * FROM TIPOHABILIDADE
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-tipohabilidade.png" width="450">
+
+```
+SELECT * FROM MATERIAL
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-material.png" width="450">
+
+```
+SELECT * FROM DOMINIO
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-dominio.png" width="450">
+
+```
+SELECT * FROM ELEMENTO_HABILIDADE
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemhab.png" width="450">
+
+```
+SELECT * FROM ELEMENTO_MATERIAL
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemmat.png" width="450">
+
+```
+SELECT * FROM ELEMENTO_HABILIDADE_MATERIAL
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemhab_possui.png" width="450">
+
+```
+SELECT * FROM MATERIAL_DOMINIO
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-matdom.png" width="450">
+
 
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
