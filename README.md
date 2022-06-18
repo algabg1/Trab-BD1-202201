@@ -26,13 +26,13 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 <img src="[image1.png](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-login.jpg)" width="450"/> <img src="[image2.png](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg)" width="450"/> 
 
 <p float="left">
-  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg" width="450" />
-  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq2.jpg" width="450" />
+  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq1.jpg" width="400" />
+  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-eq2.jpg" width="400" />
 </p>
 
 <p float="left">
-  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers1.jpg" width="450" />
-  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers2.jpg" width="450" />
+  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers1.jpg" width="400" />
+  <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/page-pers2.jpg" width="400" />
 </p>
 
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
