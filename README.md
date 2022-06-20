@@ -89,11 +89,31 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br> -->
     
-    ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, **qual o nome certo pra isso mesmo** pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
+    ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
+    ID_ELEMENTO: Campo que armazena o índice dos elementos.<br>
+    NOME: Campo que armazena o nome dos elementos.<br>
+    NIVEL: Campo que armazena o nível dos elementos.<br>
+    
     HABILIDADE: Tabela que armazena as informações das habilidades dos elementos que são personagens.<br>
-    TIPOHAB: Tabela que armazena as informações dos tipos de habilidades.
+    ID_HABILIDADE: Campo que armazena o índice das habilidades.<br>
+    NOME: Campo que armazena o nome das habilidades.<br>
+    NIVEL: Campo que armazena o nível das habilidades.<br>
+    
+    TIPOHAB: Tabela que armazena as informações dos tipos de habilidades.<br>
+    ID_TIPOHAB: Campo que armazena o índice do tipo de habilidade.<br>
+    NOME: Campo que armazena o nome do tipo de habilidade.<br>
+    
     MATERIAL: Tabela que armazena as informações dos materiais e artefatos (ambos em uma mesma tabela pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
+    ID_MATERIAL: Campo que armazena o índice do material.<br>
+    NOME: Campo que armazena o nome do material.<br>
+    DISP_HORARIO: Campo que armazena a disponibilidade do material.<br>
+    QUANTIDADE: Campo que armazena a quantidade do material.<br>
+    TIPO: Campo que armazena o tipo do material.<br>
+    
     DOMINIO: Tabela que armazena as informações dos domínios do mapa.<br>
+    ID_DOMINIO: Campo que armazena o índice do domínio.<br>
+    NOME: Campo que armazena o nome do domínio.<br>
+    DESCRICAO: Campo que armazena a descrição do domínio.<br>
 
 
 ### 6	MODELO LÓGICO<br>
@@ -351,48 +371,6 @@ INSERT INTO TIPOHAB VALUES
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 <!--    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br> -->
-
-```
-SELECT * FROM ELEMENTO
-```
-
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMENTO.png" width="450">
-
-```
-SELECT * FROM HABILIDADE
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/HABILIDADE.png" width="450">
-
-```
-SELECT * FROM MATERIAL
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/MATERIAL.png" width="450">
-
-```
-SELECT * FROM DOMINIO
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/DOMINIO.png" width="450">
-
-```
-SELECT * FROM ELEMENTO_HABILIDADE
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMHAB.png" width="450">
-
-```
-SELECT * FROM ELEMENTO_MATERIAL
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMMAT.png" width="450">
-
-```
-SELECT * FROM ELEMENTO_HABILIDADE_MATERIAL
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ELEMHABMAT.png" width="450">
-
-```
-SELECT * FROM MATERIAL_DOMINIO
-```
-<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/MATDOM.png" width="450">
-
 
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
