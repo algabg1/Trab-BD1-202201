@@ -125,87 +125,111 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
-        
-**Principais tabelas**
-
 ```
 CREATE TABLE ELEMENTO (
-    id_elemento SERIAL PRIMARY KEY,
+    id_elemento INTEGER PRIMARY KEY,
     nome VARCHAR,
     nivel INTEGER
 );
 
 CREATE TABLE HABILIDADE (
-    id_habilidade SERIAL PRIMARY KEY,
+    id_habilidade INTEGER PRIMARY KEY,
     nome VARCHAR,
-    nivel INTEGER,
-    tipo VARCHAR
+    nivel INTEGER
 );
 
 CREATE TABLE MATERIAL (
-    id_material SERIAL PRIMARY KEY,
+    id_material INTEGER PRIMARY KEY,
     nome VARCHAR,
-    quantidade INTEGER,
     disp_horario DATE,
+    quantidade INTEGER,
     tipo VARCHAR
 );
 
 CREATE TABLE DOMINIO (
-    id_dominio SERIAL PRIMARY KEY,
+    id_dominio INTEGER PRIMARY KEY,
     nome VARCHAR,
     descricao VARCHAR
 );
-```
 
-**Tabelas de relacionamento**
-```
-CREATE TABLE ELEMENTO_HABILIDADE (
-    id_elemhab SERIAL PRIMARY KEY,
-    fk_id_elemento INTEGER,
-    fk_id_habilidade INTEGER
+CREATE TABLE ELEMHAB_Possui (
+    id_elemhab INTEGER PRIMARY KEY,
+    fk_ELEMENTO_id_elemento INTEGER,
+    fk_HABILIDADE_id_habilidade INTEGER
 );
 
-ALTER TABLE ELEMENTO_HABILIDADE ADD CONSTRAINT FK_ELEM_HAB FOREIGN KEY (fk_id_elemento)
-REFERENCES ELEMENTO(id_elemento)
-
-ALTER TABLE ELEMENTO_HABILIDADE ADD CONSTRAINT FK_ELEM_HAB2 FOREIGN KEY (fk_id_habilidade)
-REFERENCES HABILIDADE(id_habilidade)
-```
-```
-CREATE TABLE ELEMENTO_MATERIAL (
-    fk_id_elemento INTEGER,
-    fk_id_material INTEGER
+CREATE TABLE TIPOHAB (
+    id_tipohab INTEGER PRIMARY KEY,
+    nome VARCHAR
 );
 
-ALTER TABLE ELEMENTO_MATERIAL ADD CONSTRAINT FK_ELEM_MAT FOREIGN KEY (fk_id_elemento)
-REFERENCES ELEMENTO(id_elemento) ON DELETE RESTRICT
-
-ALTER TABLE ELEMENTO_MATERIAL ADD CONSTRAINT FK_ELEM_MAT2 FOREIGN KEY (fk_id_material)
-REFERENCES MATERIAL(id_material) ON DELETE RESTRICT
-```
-```
-CREATE TABLE ELEMENTO_HABILIDADE_MATERIAL (
-    fk_id_elemhab INTEGER,
-    fk_id_material INTEGER
+CREATE TABLE ElemMat (
+    fk_ELEMENTO_id_elemento INTEGER,
+    fk_MATERIAL_id_material INTEGER
 );
 
-ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL ADD CONSTRAINT FK_ELEM_HAB_MAT FOREIGN KEY (fk_id_elemhab)
-REFERENCES ELEMENTO_HABILIDADE (id_elemhab) ON DELETE RESTRICT;
-
-ALTER TABLE ELEMENTO_HABILIDADE_MATERIAL ADD CONSTRAINT FK_ELEM_HAB_MAT2 FOREIGN KEY (fk_id_material)
-REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;
-```
-```
-CREATE TABLE MATERIAL_DOMINIO (
-    fk_id_material INTEGER,
-    fk_id_dominio INTEGER
+CREATE TABLE ElemHabMat (
+    fk_ELEMHAB_Possui_id_elemhab INTEGER,
+    fk_MATERIAL_id_material INTEGER
 );
 
-ALTER TABLE MATERIAL_DOMINIO ADD CONSTRAINT FK_MAT_DOM FOREIGN KEY (fk_id_material)
-REFERENCES MATERIAL (id_material) ON DELETE RESTRICT;
+CREATE TABLE MatDom (
+    fk_DOMINIO_id_dominio INTEGER,
+    fk_MATERIAL_id_material INTEGER
+);
 
-ALTER TABLE MATERIAL_DOMINIO ADD CONSTRAINT FK_MAT_DOM2 FOREIGN KEY (fk_id_dominio)
-REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
+CREATE TABLE TipoHabilidade (
+    fk_HABILIDADE_id_habilidade INTEGER,
+    fk_TIPOHAB_id_tipohab INTEGER
+);
+ 
+ALTER TABLE ELEMHAB_Possui ADD CONSTRAINT FK_ELEMHAB_Possui_2
+    FOREIGN KEY (fk_ELEMENTO_id_elemento)
+    REFERENCES ELEMENTO (id_elemento);
+ 
+ALTER TABLE ELEMHAB_Possui ADD CONSTRAINT FK_ELEMHAB_Possui_3
+    FOREIGN KEY (fk_HABILIDADE_id_habilidade)
+    REFERENCES HABILIDADE (id_habilidade);
+ 
+ALTER TABLE ElemMat ADD CONSTRAINT FK_ElemMat_1
+    FOREIGN KEY (fk_ELEMENTO_id_elemento)
+    REFERENCES ELEMENTO (id_elemento)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE ElemMat ADD CONSTRAINT FK_ElemMat_2
+    FOREIGN KEY (fk_MATERIAL_id_material)
+    REFERENCES MATERIAL (id_material)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE ElemHabMat ADD CONSTRAINT FK_ElemHabMat_1
+    FOREIGN KEY (fk_ELEMHAB_Possui_id_elemhab)
+    REFERENCES ELEMHAB_Possui (id_elemhab)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE ElemHabMat ADD CONSTRAINT FK_ElemHabMat_2
+    FOREIGN KEY (fk_MATERIAL_id_material)
+    REFERENCES MATERIAL (id_material)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE MatDom ADD CONSTRAINT FK_MatDom_1
+    FOREIGN KEY (fk_DOMINIO_id_dominio)
+    REFERENCES DOMINIO (id_dominio)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE MatDom ADD CONSTRAINT FK_MatDom_2
+    FOREIGN KEY (fk_MATERIAL_id_material)
+    REFERENCES MATERIAL (id_material)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE TipoHabilidade ADD CONSTRAINT FK_TipoHabilidade_1
+    FOREIGN KEY (fk_HABILIDADE_id_habilidade)
+    REFERENCES HABILIDADE (id_habilidade)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE TipoHabilidade ADD CONSTRAINT FK_TipoHabilidade_2
+    FOREIGN KEY (fk_TIPOHAB_id_tipohab)
+    REFERENCES TIPOHAB (id_tipohab)
+    ON DELETE RESTRICT;
 ```
         
        
@@ -215,6 +239,8 @@ REFERENCES DOMINIO (id_dominio) ON DELETE RESTRICT;
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL -->
+
+https://github.com/algabg1/Trab-BD1-202201/blob/master/arquivos/ModeloFisicoFinal.sql
 
 ```
 INSERT INTO DOMINIO VALUES
