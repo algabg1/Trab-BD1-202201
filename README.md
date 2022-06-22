@@ -432,22 +432,22 @@ SELECT * FROM DOMINIO
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-dominio.png" width="450">
 
 ```
-SELECT * FROM ELEMENTO_HABILIDADE
+SELECT * FROM ELEMHAB_POSSUI
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemhab.png" width="450">
 
 ```
-SELECT * FROM ELEMENTO_MATERIAL
+SELECT * FROM ELEMMAT
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemmat.png" width="450">
 
 ```
-SELECT * FROM ELEMENTO_HABILIDADE_MATERIAL
+SELECT * FROM ELEMHABMAT
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-elemhab_possui.png" width="450">
 
 ```
-SELECT * FROM MATERIAL_DOMINIO
+SELECT * FROM MATDOM
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/insert-matdom.png" width="450">
 
