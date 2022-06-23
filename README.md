@@ -455,10 +455,56 @@ SELECT * FROM MATDOM
 ># Marco de Entrega 01: Do item 1 até o item 9.1<br>
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+```
+SELECT * FROM TIPOHABILIDADE WHERE FK_TIPOHAB_ID_TIPOHAB = 3
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/WHERE1.png" width="450">
+
+```
+SELECT * FROM ELEMHABMAT WHERE FK_MATERIAL_ID_MATERIAL = 16
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/WHERE2.png" width="450">
+
+```
+SELECT * FROM MATERIAL WHERE TIPO = 'Elemental Stone'
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/WHERE3.png" width="450">
+
+```
+SELECT * FROM DOMINIO WHERE DESCRICAO = 'Boss Domain'
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/WHERE4.png" width="450">
+
+
+
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
+    a) Consultas que envolvam os operadores lógicos AND, OR e Not
+
+
+
+    b) Consultas com operadores aritméticos 
+    
+```
+SELECT * FROM ELEMENTO WHERE NIVEL > 5
+``` 
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/OPERADORARITMETICO1.png" width="450">
+    
+```
+SELECT * FROM HABILIDADE WHERE NIVEL > 4 AND NIVEL < 7
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/OPERADORARITMETICO2.png" width="450">
+    
+```
+SELECT NOME, NIVEL FROM HABILIDADE WHERE NIVEL >= 3
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/OPERADORARITMETICO3.png" width="450">
+    
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+
+
+
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
