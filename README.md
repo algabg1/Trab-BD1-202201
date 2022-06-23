@@ -83,37 +83,41 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
     Grupo02: Matheus Aguiar, Douglas Nunes e Jhovany Murgia.
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
     
   <!--  EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br> -->
     
-    ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
-    ID_ELEMENTO: Campo que armazena o índice dos elementos.<br>
-    NOME: Campo que armazena o nome dos elementos.<br>
-    NIVEL: Campo que armazena o nível dos elementos.<br>
+ELEMENTO: Tabela que armazena as informações dos personagens e equipamentos (ambos em uma mesma tabela, pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
     
-    HABILIDADE: Tabela que armazena as informações das habilidades dos elementos que são personagens.<br>
-    ID_HABILIDADE: Campo que armazena o índice das habilidades.<br>
-    NOME: Campo que armazena o nome das habilidades.<br>
-    NIVEL: Campo que armazena o nível das habilidades.<br>
+    ID_ELEMENTO: Campo que armazena o índice dos elementos.
+    NOME: Campo que armazena o nome dos elementos.
+    NIVEL: Campo que armazena o nível dos elementos.
     
-    TIPOHAB: Tabela que armazena as informações dos tipos de habilidades.<br>
-    ID_TIPOHAB: Campo que armazena o índice do tipo de habilidade.<br>
-    NOME: Campo que armazena o nome do tipo de habilidade.<br>
+HABILIDADE: Tabela que armazena as informações das habilidades dos elementos que são personagens.<br>
     
-    MATERIAL: Tabela que armazena as informações dos materiais e artefatos (ambos em uma mesma tabela pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
-    ID_MATERIAL: Campo que armazena o índice do material.<br>
-    NOME: Campo que armazena o nome do material.<br>
-    DISP_HORARIO: Campo que armazena a disponibilidade do material.<br>
-    QUANTIDADE: Campo que armazena a quantidade do material.<br>
-    TIPO: Campo que armazena o tipo do material.<br>
+    ID_HABILIDADE: Campo que armazena o índice das habilidades.
+    NOME: Campo que armazena o nome das habilidades.
+    NIVEL: Campo que armazena o nível das habilidades.
     
-    DOMINIO: Tabela que armazena as informações dos domínios do mapa.<br>
-    ID_DOMINIO: Campo que armazena o índice do domínio.<br>
-    NOME: Campo que armazena o nome do domínio.<br>
-    DESCRICAO: Campo que armazena a descrição do domínio.<br>
+TIPOHAB: Tabela que armazena as informações dos tipos de habilidades.
+    
+    ID_TIPOHAB: Campo que armazena o índice do tipo de habilidade.
+    NOME: Campo que armazena o nome do tipo de habilidade.
+    
+MATERIAL: Tabela que armazena as informações dos materiais e artefatos (ambos em uma mesma tabela pois seriam a mesma coisa no contexto do banco de dados desenvolvido).<br>
+
+    ID_MATERIAL: Campo que armazena o índice do material.
+    NOME: Campo que armazena o nome do material.
+    DISP_HORARIO: Campo que armazena a disponibilidade do material.
+    QUANTIDADE: Campo que armazena a quantidade do material.
+    TIPO: Campo que armazena o tipo do material.
+    
+DOMINIO: Tabela que armazena as informações dos domínios do mapa.<br>
+
+    ID_DOMINIO: Campo que armazena o índice do domínio.
+    NOME: Campo que armazena o nome do domínio.
+    DESCRICAO: Campo que armazena a descrição do domínio.
 
 
 ### 6	MODELO LÓGICO<br>
