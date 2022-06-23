@@ -60,7 +60,7 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
  <!--   a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
     b) Esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados -->
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Simulação de relatório dos dados que serão armazenados](https://github.com/algabg1/Trab-BD1-202201/blob/master/arquivos/Tabelas%20Genshin.xlsx "Tabela - Coleta de Materiais de Genshin Imapct")
     
     
 ### 5.MODELO CONCEITUAL<br>
@@ -520,10 +520,27 @@ SELECT NOME, NIVEL FROM HABILIDADE WHERE NIVEL >= 3
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+
+
+
     b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+
+```
+SELECT E.NOME AS NOME_ELEMENTO, MAT.NOME AS NOME_MATERIAL FROM ELEMENTO E
+INNER JOIN ELEMMAT EM
+ON (EM.FK_ELEMENTO_ID_ELEMENTO=E.ID_ELEMENTO)
+INNER JOIN MATERIAL MAT
+ON (MAT.ID_MATERIAL=EM.FK_MATERIAL_ID_MATERIAL)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/INNER1.png" width="450">
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
     a) Criar minimo 2 envolvendo algum tipo de junção
+
+```
+SELECT COUNT(TIPO) AS QNT, TIPO FROM MATERIAL GROUP BY TIPO
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY1.png" width="450">
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
