@@ -520,7 +520,22 @@ SELECT NOME, NIVEL FROM HABILIDADE WHERE NIVEL >= 3
     
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
+```
+SELECT ID_ELEMENTO AS ID_ELEM, NOME AS NOME_ELEMENTO FROM ELEMENTO
+```
 
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RENAME.png" width="450">
+
+```
+SELECT FK_ELEMHAB_POSSUI_ID_ELEMHAB AS ID_ELEMHAB, FK_MATERIAL_ID_MATERIAL AS ID_MATERIAL FROM ELEMHABMAT
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RENAME2.png" width="450">
+
+```
+SELECT ID_TIPOHAB AS ID_TIPOHABILIDADE, NOME FROM TIPOHAB
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RENAME3.png" width="450">
 
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
