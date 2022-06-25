@@ -486,7 +486,20 @@ SELECT * FROM DOMINIO WHERE DESCRICAO = 'Boss Domain'
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Consultas que envolvam os operadores lógicos AND, OR e Not
 
+```
+SELECT * FROM DOMINIO WHERE DESCRICAO = 'Talent Material' OR DESCRICAO = 'Weapon Material'
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/OR.png" width="450">
 
+```
+SELECT * FROM DOMINIO WHERE DESCRICAO = 'Weapon Material' AND NOME = 'Cecilia Garden'
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/AND.png" width="450">
+
+```
+SELECT * FROM DOMINIO WHERE DESCRICAO NOT IN ('Weapon Material')
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/NOT.png" width="450">
 
     b) Consultas com operadores aritméticos 
     
