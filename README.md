@@ -571,12 +571,30 @@ SELECT * FROM MATERIAL Where DISP_HORARIO::date >= '2022-06-21'
 
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    
+ ```
+UPDATE ELEMHAB_POSSUI
+SET FK_HABILIDADE_ID_HABILIDADE = 4(ATE 15)
+WHERE ID_ELEMHAB = 4(ATE 15) 
+ ```
+ 
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/UPDATE.png" width="450">
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
     Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
 
+```
+SELECT E.NOME AS NOME_ELEMENTO, H.NOME AS NOME_HABILIDADE, MAT.NOME AS NOME_MATERIAL, D.NOME AS NOME_DOMINIO FROM ELEMENTO E
+INNER JOIN ELEMHAB_POSSUI EHP ON(E.ID_ELEMENTO = EHP.FK_ELEMENTO_ID_ELEMENTO)
+INNER JOIN HABILIDADE H ON(EHP.FK_HABILIDADE_ID_HABILIDADE = H.ID_HABILIDADE)
+INNER JOIN ELEMHABMAT EHM ON(EHP.ID_ELEMHAB = EHM.FK_ELEMHAB_POSSUI_ID_ELEMHAB)
+INNER JOIN MATERIAL MAT ON(EHM.FK_MATERIAL_ID_MATERIAL = MAT.ID_MATERIAL)
+INNER JOIN MATDOM MD ON(MAT.ID_MATERIAL = MD.FK_MATERIAL_ID_MATERIAL)
+INNER JOIN DOMINIO D ON(MD.FK_DOMINIO_ID_DOMINIO = D.ID_DOMINIO)
+GROUP BY E.NOME, H.NOME, MAT.NOME, D.NOME
+ORDER BY E.NOME ASC
+```
 
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/BIGINNER.png" width="450">
 
     Outras junções consideradas como sendo as de principal importância
 
@@ -596,6 +614,40 @@ ON (MAT.ID_MATERIAL=EM.FK_MATERIAL_ID_MATERIAL)
 SELECT COUNT(TIPO) AS QNT, TIPO FROM MATERIAL GROUP BY TIPO
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY1.png" width="450">
+
+```
+SELECT COUNT(DESCRICAO), DESCRICAO FROM DOMINIO GROUP BY DESCRICAO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY2.png" width="450">
+
+
+```
+SELECT COUNT(TIPO), TIPO, DISP_HORARIO FROM MATERIAL WHERE DISP_HORARIO = '2022-06-20' GROUP BY TIPO,DISP_HORARIO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY3.png" width="450">
+
+
+```
+SELECT COUNT(TIPO), TIPO, DISP_HORARIO FROM MATERIAL WHERE DISP_HORARIO = '2022-06-21' GROUP BY TIPO,DISP_HORARIO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY4.png" width="450">
+
+
+```
+SELECT COUNT(TIPO), TIPO, DISP_HORARIO FROM MATERIAL WHERE DISP_HORARIO = '2022-06-22' GROUP BY TIPO,DISP_HORARIO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY5.png" width="450">
+
+
+```
+SELECT COUNT(QUANTIDADE), QUANTIDADE, TIPO FROM MATERIAL WHERE QUANTIDADE = 2 GROUP BY QUANTIDADE,TIPO
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/GROUPBY6.png" width="450">
 
 #### 9.8	CONSULTAS COM LEFT, RIGHT E FULL JOIN (Mínimo 4)<br>
     a) Criar minimo 1 de cada tipo
