@@ -690,8 +690,74 @@ GROUP BY MAT.TIPO,E.NOME
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LEFT2.png" width="450">
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join (caso não ocorra na base justificar e substituir por uma view)
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+```
+CREATE VIEW VIEW1 AS
+SELECT E.NOME AS NOME_ELEMENTO, MAT.NOME AS NOME_MATERIAL FROM ELEMENTO E
+INNER JOIN ELEMMAT EM
+ON (EM.FK_ELEMENTO_ID_ELEMENTO=E.ID_ELEMENTO)
+INNER JOIN MATERIAL MAT
+ON (MAT.ID_MATERIAL=EM.FK_MATERIAL_ID_MATERIAL)
+
+SELECT  * FROM VIEW1
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW1.png" width="450">
+
+
+```
+CREATE VIEW VIEW2 AS
+SELECT E.NOME AS NOME_ELEMENTO, H.NOME AS NOME_HABILIDADE, MAT.NOME AS NOME_MATERIAL, D.NOME AS NOME_DOMINIO FROM ELEMENTO E
+INNER JOIN ELEMHAB_POSSUI EHP ON(E.ID_ELEMENTO = EHP.FK_ELEMENTO_ID_ELEMENTO)
+INNER JOIN HABILIDADE H ON(EHP.FK_HABILIDADE_ID_HABILIDADE = H.ID_HABILIDADE)
+INNER JOIN ELEMHABMAT EHM ON(EHP.ID_ELEMHAB = EHM.FK_ELEMHAB_POSSUI_ID_ELEMHAB)
+INNER JOIN MATERIAL MAT ON(EHM.FK_MATERIAL_ID_MATERIAL = MAT.ID_MATERIAL)
+INNER JOIN MATDOM MD ON(MAT.ID_MATERIAL = MD.FK_MATERIAL_ID_MATERIAL)
+INNER JOIN DOMINIO D ON(MD.FK_DOMINIO_ID_DOMINIO = D.ID_DOMINIO)
+GROUP BY E.NOME, H.NOME, MAT.NOME, D.NOME
+ORDER BY E.NOME ASC
+
+SELECT  * FROM VIEW2
+
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW2.png" width="450">
+
+
+```
+CREATE VIEW VIEW3 AS
+SELECT * FROM DOMINIO WHERE DESCRICAO NOT IN ('Weapon Material')
+
+SELECT  * FROM VIEW3
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW3.png" width="450">
+
+
+```
+CREATE VIEW VIEW4 AS
+SELECT * FROM DOMINIO WHERE DESCRICAO ='Boss Domain'
+
+SELECT  * FROM VIEW4
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW4.png" width="450">
+
+
+```
+CREATE VIEW VIEW5 AS
+SELECT * FROM DOMINIO WHERE DESCRICAO = 'Talent Material'
+
+SELECT  * FROM VIEW5
+
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW5.png" width="450">
+
+
+```
+CREATE VIEW VIEW6 AS
+SELECT * FROM DOMINIO WHERE DESCRICAO LIKE '%Material%'
+
+SELECT  * FROM VIEW6
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/VIEW6.png" width="450">
+
+
 
 #### 9.10	SUBCONSULTAS (Mínimo 4)<br>
      a) Criar minimo 1 envolvendo GROUP BY
