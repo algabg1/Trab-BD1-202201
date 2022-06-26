@@ -45,15 +45,6 @@ Este documento contém a especificação do projeto do banco de dados **Materiai
 * Relatórios de materiais e artefatos que os equipamentos utilizam.
 * Relatórios dos locais que os materiais e artefatos estão disponíveis.
 * Relatórios dos dias e a quantidade de tempo que os materiais e artefatos estarão disponíveis.
-
-<!-- A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que mostre o nome de cada supervisor(a) e a quantidade de empregados supervisionados.
-* Relatório relativo aos os supervisores e supervisionados. O resultado deve conter o nome do supervisor e nome do supervisionado além da quantidade total de horas que cada supervisionado tem alocada aos projetos existentes na empresa.
-* Relatorio que mostre para cada linha obtida o nome do departamento, o valor individual de cada salario existente no  departamento e a média geral de salarios dentre todos os empregados. Os resultados devem ser apresentados ordenados por departamento.
-* Relatório que mostre as informações relacionadas a todos empregados de empresa (sem excluir ninguém). As linhas resultantes devem conter informações sobre: rg, nome, salario do empregado, data de início do salario atual, nomes dos projetos que participa, quantidade de horas e localização nos referidos projetos, numero e nome dos departamentos aos quais está alocado, informações do historico de salário como inicio, fim, e valores de salarios antigos que foram inclusos na referida tabela (caso possuam informações na mesma), além de todas informações relativas aos dependentes. 
->> ##### Observações: <br> a) perceba que este relatório pode conter linhas com alguns dados repetidos (mas não todos). <br>  b) para os empregados que não possuirem alguma destas informações o valor no registro deve aparecer sem informação/nulo. 
-* Relatório que obtenha a frequencia absoluta e frequencia relativa da quantidade de cpfs únicos no relatório anterior. Apresente os resultados ordenados de forma decrescente pela frequencia relativa. -->
-
  
  
 #### 4.3 TABELA DE DADOS DO SISTEMA:
@@ -128,7 +119,7 @@ DOMINIO: Tabela que armazena as informações dos domínios do mapa.<br>
 ![alt text](https://github.com/algabg1/Trab-BD1-202201/blob/master/images/ModeloLogicoGenshin.png)
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas em SQL/DDL 
+        inclusão das instruções de criacão das estruturas em SQL/DDL 
 ```
 CREATE TABLE ELEMENTO (
     id_elemento INTEGER PRIMARY KEY,
@@ -484,7 +475,7 @@ SELECT * FROM DOMINIO WHERE DESCRICAO = 'Boss Domain'
 
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Consultas que envolvam os operadores lógicos AND, OR e Not
+    Consultas que envolvam os operadores lógicos AND, OR e Not
 
 ```
 SELECT * FROM DOMINIO WHERE DESCRICAO = 'Talent Material' OR DESCRICAO = 'Weapon Material'
@@ -501,7 +492,7 @@ SELECT * FROM DOMINIO WHERE DESCRICAO NOT IN ('Weapon Material')
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/NOT.png" width="450">
 
-    b) Consultas com operadores aritméticos 
+    Consultas com operadores aritméticos 
     
 ```
 SELECT * FROM ELEMENTO WHERE NIVEL > 5
@@ -518,7 +509,7 @@ SELECT NOME, NIVEL FROM HABILIDADE WHERE NIVEL >= 3
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/OPERADORARITMETICO3.png" width="450">
     
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    consultas com operação de renomear nomes de campos ou tabelas
 
 ```
 SELECT ID_ELEMENTO AS ID_ELEM, NOME AS NOME_ELEMENTO FROM ELEMENTO
@@ -539,19 +530,55 @@ SELECT ID_TIPOHAB AS ID_TIPOHABILIDADE, NOME FROM TIPOHAB
 
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
+
+
+```
+SELECT * FROM MATERIAL WHERE NOME LIKE '%Mist%'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LIKE1.png" width="450">
+
+```
+SELECT * FROM MATERIAL WHERE TIPO LIKE '%Ascension%'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LIKE2.png" width="450">
+
+
+```
+SELECT * FROM HABILIDADE WHERE NOME LIKE '%Bladework%'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LIKE3.png" width="450">
+
+```
+SELECT * FROM DOMINIO WHERE DESCRICAO LIKE '%Material%'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LIKE4.png" width="450">
+
+```
+SELECT * FROM DOMINIO WHERE NOME LIKE '%Court%'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/LIKE5.png" width="450">
+
+```
+SELECT * FROM MATERIAL Where DISP_HORARIO::date >= '2022-06-21'
+```
+
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/DATE1.png" width="450">
+
 
 #### 9.5	INSTRUÇÕES APLICANDO ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
-    a) Criar minimo 3 de exclusão
-    b) Criar minimo 3 de atualização
+    
 
 #### 9.6	CONSULTAS COM INNER JOIN E ORDER BY (Mínimo 6)<br>
-    a) Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
+    Uma junção que envolva todas as tabelas possuindo no mínimo 2 registros no resultado
 
 
 
-    b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+    Outras junções consideradas como sendo as de principal importância
 
 ```
 SELECT E.NOME AS NOME_ELEMENTO, MAT.NOME AS NOME_MATERIAL FROM ELEMENTO E
@@ -563,7 +590,7 @@ ON (MAT.ID_MATERIAL=EM.FK_MATERIAL_ID_MATERIAL)
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/INNER1.png" width="450">
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
-    a) Criar minimo 2 envolvendo algum tipo de junção
+    
 
 ```
 SELECT COUNT(TIPO) AS QNT, TIPO FROM MATERIAL GROUP BY TIPO
