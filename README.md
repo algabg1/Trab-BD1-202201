@@ -771,6 +771,41 @@ SELECT  * FROM VIEW6
 #### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
 #### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 
+Para que o relatório obtivesse resultados melhores e mais completos, foram feitas alterações no banco. As alterações são referentes à inclusão de mais informações no banco, disponíveis ![aqui](https://github.com/algabg1/Trab-BD1-202201/blob/master/arquivos/InsertRelatorio.sql).
+
+RELATÓRIO 1
+
+Objetivo: Esse relatório tem como objetivo mostrar quantos materiais há em cada tipo de material.
+
+Código para obtenção do resultado:
+```
+res = pd.read_sql_query("""
+                        SELECT COUNT(TIPO) AS QUANTIDADE, TIPO FROM MATERIAL GROUP BY TIPO
+                            """,conn)
+res
+
+sns.barplot(x='quantidade',y='tipo',data=res)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO1.png" width="450">
+
+
+RELATÓRIO 2
+
+Objetivo:
+
+Código para obtenção do resultado:
+```
+res = pd.read_sql_query("""
+                        SELECT COUNT(DOM.NOME), DOM.NOME AS NOME_DOMINIO FROM DOMINIO DOM
+                        INNER JOIN MATDOM MD ON(MD.FK_DOMINIO_ID_DOMINIO = DOM.ID_DOMINIO)
+                        INNER JOIN MATERIAL MAT ON(MAT.ID_MATERIAL = MD.FK_MATERIAL_ID_MATERIAL)
+                        GROUP BY DOM.NOME
+                            """,conn)
+res
+
+sns.barplot(x='count',y='nome_dominio',data=res)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO2.png" width="450">
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
