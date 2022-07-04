@@ -866,9 +866,9 @@ sns.barplot(x='quantidade_material',y='tipo',data=res)
 
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
+![Slide de apresentação](https://github.com/algabg1/Trab-BD1-202201/blob/master/arquivos/BD-SlideFinal.pdf).
 
-#### a) Modelo (pecha kucha)<br>
-#### b) Tempo de apresentação 6:40 
+![Vídeo de apresentação](https://youtu.be/TBhQM0j5TSE).
 
 ># Marco de Entrega 03: Itens 10 e 11<br>
 <br>
