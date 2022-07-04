@@ -791,7 +791,7 @@ sns.barplot(x='quantidade',y='tipo',data=res)
 
 RELATÓRIO 2
 
-Objetivo:
+Objetivo: Esse relatório tem como objetivo mostrar quantos materiais registrados há nos domínios.
 
 Código para obtenção do resultado:
 ```
@@ -806,6 +806,42 @@ res
 sns.barplot(x='count',y='nome_dominio',data=res)
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO2.png" width="450">
+
+RELATÓRIO 3
+
+Objetivo: Esse relatório tem como objetivo mostrar a quantidade de materiais periféricos ao personagem.
+
+Código para obtenção do resultado:
+```
+res = pd.read_sql_query("""
+                        SELECT COUNT(TIPO) AS QUANTIDADE_MATERIAL, TIPO AS TIPO_MATERIAL FROM MATERIAL WHERE TIPO LIKE '%Local%' OR TIPO LIKE '%Secondary%' GROUP BY TIPO
+                            """,conn)
+res
+
+sns.barplot(x='quantidade_material',y='tipo_material',data=res)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO3.png" width="450">
+
+RELATÓRIO 4
+
+Objetivo: Esse relatório tem como objetivo mostrar quantos elementos registrados são personagens e quantos são equipamentos.
+
+Código para obtenção do resultado:
+```
+res = pd.read_sql_query("""
+                        SELECT COUNT(MAT.TIPO) AS QNT_ELEMENTO, MAT.TIPO AS TIPO_ELEMENTO FROM ELEMENTO E
+                        INNER JOIN ELEMMAT EM ON(EM.FK_ELEMENTO_ID_ELEMENTO = E.ID_ELEMENTO)
+                        INNER JOIN MATERIAL MAT ON(EM.FK_MATERIAL_ID_MATERIAL = MAT.ID_MATERIAL)
+                        WHERE MAT.TIPO = 'Weapon Ascension Material' OR MAT.TIPO = 'Character Primary Ascension Material'
+                        GROUP BY MAT.TIPO
+                            """,conn)
+res
+
+sns.barplot(x='qnt_elemento',y='tipo_elemento',data=res)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO4.png" width="450">
+
+
     
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
