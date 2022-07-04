@@ -841,8 +841,29 @@ sns.barplot(x='qnt_elemento',y='tipo_elemento',data=res)
 ```
 <img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO4.png" width="450">
 
+RELATÓRIO 5
 
-    
+Objetivo:
+
+Código para obtenção do resultado:
+```
+res = pd.read_sql_query("""
+                        SELECT SUM(MAT.QUANTIDADE) AS QUANTIDADE_MATERIAL, MAT.TIPO FROM ELEMENTO E
+                        INNER JOIN ELEMMAT EM ON(EM.FK_ELEMENTO_ID_ELEMENTO = E.ID_ELEMENTO)
+                        INNER JOIN MATERIAL MAT ON(EM.FK_MATERIAL_ID_MATERIAL = MAT.ID_MATERIAL)
+                        WHERE MAT.TIPO = 'Weapon Ascension Material' OR (
+	                        MAT.TIPO = 'Character Primary Ascension Material'
+	                        OR MAT.TIPO = 'Elemental Stone'
+	                        OR MAT.TIPO = 'Local Character Ascension Material'
+	                        OR MAT.TIPO = 'Secondary Ascension Material')
+                        GROUP BY MAT.TIPO
+                            """,conn)
+res
+
+sns.barplot(x='quantidade_material',y='tipo',data=res)
+```
+<img src="https://github.com/algabg1/Trab-BD1-202201/blob/master/images/RELATORIO5.png" width="450">
+
 
 ### 11	AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
 
